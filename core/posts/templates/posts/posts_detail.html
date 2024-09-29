@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Mangrove Luppung</title>
+    <!-- todo link css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/posts.css'%}" />
+
+    <!-- todo boxicons -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+
+    <!-- todo font google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--header-->
+    <header>
+      <a href="/" class="logo">Mangrove Luppung</a>
+      <div class="bx bx-menu" id="menu-icon"></div>
+      <ul class="navbar">
+        <li><a href="/">Home</a></li>
+        <li><a href="/">Layanan</a></li>
+        <li><a href="/">Galery</a></li>
+        <li><a href="/">Contact Us</a></li>
+      </ul>
+    </header>
+
+    <!--Home Section-->
+    <div class="blog">
+      <section class="detail-blog" id="destination">
+        <div class="banner">
+          {% if post.banner %}
+          <img
+            src="{{ post.banner.url }}"
+            alt="{{ post.title }}"
+            class="banner-image"
+          />
+          {% else %}
+          <img
+            src="{% static 'path/to/fallback.png' %}"
+            alt="Default Banner"
+            class="banner-image"
+          />
+          {% endif %}
+        </div>
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.date }}</p>
+        <p>{{ post.body }}</p>
+      </section>
+    </div>
+
+    <!--footer-->
+    <section id="contact">
+      <div class="footer">
+        <div class="main">
+          <div class="list">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/">Layanan</a></li>
+              <li><a href="/">Galery</a></li>
+              <li><a href="/">Kontak</a></li>
+            </ul>
+          </div>
+
+          <div class="list">
+            <h4>Support</h4>
+            <ul>
+              <li>
+                <a
+                  href="https://www.instagram.com/bina.adinata/"
+                  target="_blank"
+                  >INSTITUT TEKNOLOGI <br />
+                  DAN BISNIS <br />
+                  BINA ADINATA</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://instagram.com/kknt8_desamanyampa"
+                  target="_blank"
+                  >Tim KKN Tematik Angk.VIII Posko I Desa Manyampa</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="list">
+            <h4>Contact Info</h4>
+            <ul>
+              <li>
+                <a
+                  href="https://maps.app.goo.gl/WAJZ1R99akfBGpANA"
+                  target="_blank"
+                >
+                  Alamat: Jl. Mangrove Luppung, Desa Manyampa
+                </a>
+              </li>
+              <li>
+                <a href="https://wa.me/+6285756397844" target="_blank"
+                  >Phone: +62 812-3456-789
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@mangroveluppung.com" target="_blank"
+                  >Email: info@mangroveluppung.com</a
+                >
+              </li>
+              <li><a href="">Jam buka: Setiap Hari, 08.00 - 19.00</a></li>
+            </ul>
+          </div>
+
+          <div class="list">
+            <h4>Linktree</h4>
+            <ul>
+              <li>
+                <a href="https://facebook.com/mangrove.manyampa" target="_blank"
+                  >Facebook</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://facebook.com/mangroveluppungmanyampa"
+                  target="_blank"
+                  >Fanspage</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/mangroveluppung/"
+                  target="_blank"
+                  >Instagram</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="end-text">
+        <img class="iteb" src="{% static 'img/iteb.png'%}" alt="" />
+        <p>
+          &copy; 2024 All rights reserved | Made with
+          <a href="https://www.instagram.com/kknt8_desamanyampa"
+            >KKNT ITEB BINA ADINATA
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!--link to js-->
+    <script type="text/javascript" src="{% static 'js/script.js'%}"></script>
+  </body>
+</html>

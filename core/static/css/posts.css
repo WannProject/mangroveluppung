@@ -1,0 +1,599 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Paytone One", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+:root {
+  --background-color: #fff;
+  --text-color: rgb(18, 100, 18);
+  --second-color: #5a7184;
+  --main-color: #221314;
+  --big-font: 4rem;
+  --h2-font: 3rem;
+  --p-font: 1.1rem;
+}
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  padding: 30px 18%;
+  transition: ease 0.4s;
+}
+.logo {
+  font-size: 35px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--text-color);
+}
+.navbar {
+  display: flex;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-btn {
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.blog-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.nav-btn:hover {
+  opacity: 0.8;
+}
+.navbar a {
+  color: var(--text-color);
+  font-size: var(--p-font);
+  font-weight: 500;
+  padding: 10px 22px;
+  border-radius: 4px;
+  transition: ease 0.4s;
+}
+.navbar a:hover {
+  background: var(--background-color);
+  color: var(--text-color);
+  box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+  border-radius: 4px;
+}
+#menu-icon {
+  color: var(--background-color);
+  font-size: 35px;
+  z-index: 10001;
+  cursor: pointer;
+  display: none;
+}
+
+section {
+  padding: 80px 18%;
+}
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  color: var(--main-color);
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-items: center;
+}
+
+header.sticky {
+  background-color: white;
+  padding: 10px 18%;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+.sticky .logo {
+  color: var(--main-color);
+}
+.sticky .navbar a {
+  color: var(--main-color);
+}
+
+.container .text {
+  padding-top: 30px;
+  text-align: center;
+  color: black;
+}
+
+.text h2 {
+  font-size: var(--h2-font);
+  line-height: 1.1;
+}
+.row-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  grid-gap: 5rem;
+  align-items: center;
+  text-align: center;
+  margin-top: 5rem;
+}
+.container-box {
+  background: rgb(252, 250, 250);
+  border: 2px solid #f0eded;
+  padding: 50px 10px;
+  border-radius: -20px;
+  transition: all 1s ease 0s;
+  cursor: pointer;
+}
+.container-img img {
+  height: 85px;
+  width: 85px;
+  padding: 15px;
+  background: rgb(252, 250, 250);
+  box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+.container-box h4 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.container-box p {
+  font-size: 15px;
+  color: var(--second-color);
+}
+.container-box:hover {
+  box-shadow: 5px 30px 56.1276px rgb(55 55 55 / 12%);
+  border: 1px solid transparent;
+  transform: translateY(-3px);
+}
+
+.title {
+  text-align: center;
+}
+.title h2 {
+  font-size: var(--h2-font);
+  line-height: 1.2;
+}
+
+.package-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  grid-gap: 2rem;
+  align-items: center;
+  margin-top: 5rem;
+}
+.thum {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.455, 0.05, 0.55, 0.95);
+  will-change: filter;
+  cursor: pointer;
+}
+.thum img {
+  width: 100%;
+  height: auto;
+}
+.thum h3 {
+  position: absolute;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: right;
+  color: var(--main-color);
+  top: 20px;
+  right: 40px;
+}
+
+.destination h2 {
+  text-align: center;
+  font-size: 35px;
+}
+.dest-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 24px;
+}
+
+.destination .blog {
+  color: black;
+}
+
+.location h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.location p {
+  font-size: 15px;
+  color: var(--second-color);
+}
+.thum:hover {
+  filter: brightness(100%) hue-rotate(45deg);
+  transform: scale(1.04);
+}
+
+/* todo blog style */
+
+/* Container untuk menampilkan konten */
+.destination-content {
+  display: flex;
+  flex-wrap: wrap; /* Membungkus baris jika lebih dari 3 */
+  gap: 20px; /* Jarak antar kolom */
+  justify-content: center; /* Center align */
+  margin: 20px auto; /* Margin otomatis untuk center */
+  max-width: 1200px; /* Atur lebar maksimal agar tetap responsif */
+}
+
+/* Kontainer kolom */
+.col-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 30%; /* Membuat tiga kolom */
+  min-width: 250px; /* Lebar minimum untuk kolom agar responsif */
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+/* Judul dan paragraf */
+.col-content h5 {
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.col-content p {
+  margin: 0;
+  padding-bottom: 10px;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 60px;
+}
+
+/* Tombol detail */
+.view-detail {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Gaya tombol */
+.view-button {
+  padding: 10px 20px;
+  background-color: #28a745; /* Warna hijau */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.view-button:hover {
+  background-color: #218838; /* Warna saat hover */
+}
+
+/* todo blog style */
+
+/* todo blog detail start */
+/* Gaya untuk section detail postingan */
+.blog {
+  padding-top: 50px;
+}
+.detail-blog {
+  padding-top: 100px;
+  max-width: 800px; /* Lebar maksimal untuk teks agar lebih nyaman dibaca */
+  margin: 40px auto; /* Memusatkan section dengan margin auto */
+  padding: 20px; /* Padding di sekitar konten */
+  background-color: #ffffff; /* Warna latar belakang putih untuk kontras */
+  border-radius: 10px; /* Membuat sudut kotak menjadi melengkung */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow untuk memberi efek ketinggian */
+  font-family: "Arial", sans-serif; /* Font standar */
+  line-height: 1.6; /* Jarak antar baris untuk kenyamanan membaca */
+}
+
+.banner {
+  width: 100%;
+  max-height: 400px; /* Adjust this value as needed */
+  overflow: hidden;
+  position: relative;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Gaya untuk judul */
+.detail-blog h1 {
+  font-size: 2.4rem; /* Ukuran font besar untuk judul */
+  color: #2e7d32; /* Warna hijau untuk judul */
+  margin-bottom: 15px; /* Jarak bawah antara judul dan tanggal */
+  text-align: center; /* Center align untuk judul */
+  font-weight: bold; /* Membuat judul tebal */
+}
+
+/* Gaya untuk tanggal */
+.detail-blog p:first-of-type {
+  font-size: 0.9rem; /* Ukuran font yang lebih kecil untuk tanggal */
+  color: #6c757d; /* Warna abu-abu untuk tanggal */
+  margin-bottom: 20px; /* Jarak bawah antara tanggal dan konten */
+  text-align: center; /* Center align untuk tanggal */
+  font-style: italic; /* Membuat teks tanggal miring */
+}
+
+/* Gaya untuk konten teks */
+.detail-blog p {
+  font-size: 1rem; /* Ukuran font normal untuk teks konten */
+  color: #333; /* Warna teks yang lebih gelap untuk kontras dan kenyamanan membaca */
+  margin-bottom: 15px; /* Jarak bawah antar paragraf */
+  text-align: justify; /* Membuat teks konten rata kiri dan kanan */
+  word-wrap: break-word; /* Memastikan teks tidak melampaui batas kontainer */
+}
+
+/* Gaya untuk gambar dalam konten (jika ada) */
+.detail-blog img {
+  max-width: 100%; /* Membuat gambar responsif */
+  height: auto; /* Mempertahankan rasio aspek gambar */
+  display: block; /* Menghilangkan jarak default gambar */
+  margin: 20px auto; /* Center align untuk gambar */
+  border-radius: 8px; /* Membuat sudut gambar melengkung */
+}
+
+/* Gaya untuk link dalam konten */
+.detail-blog a {
+  color: #0069d9; /* Warna biru untuk link */
+  text-decoration: none; /* Menghilangkan garis bawah default */
+  transition: color 0.3s; /* Animasi transisi untuk perubahan warna */
+}
+
+.detail-blog a:hover {
+  color: #004085; /* Warna biru lebih gelap saat hover */
+}
+
+/* todo blog detail end */
+
+/* Responsif untuk ukuran layar yang lebih kecil */
+
+.col-content:hover {
+  transform: translateY(-5px);
+}
+
+.col-content img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.col-content h5 {
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
+  padding: 0 10px;
+}
+
+.col-content p {
+  font-size: 1rem;
+  color: #666;
+  padding: 0 10px 10px;
+}
+
+.col-content img:hover {
+  filter: brightness(100%) hue-rotate(45deg);
+  transform: scale(1.04);
+  cursor: pointer;
+}
+
+#contact {
+  background: var(--main-color);
+}
+.main {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer {
+  padding: 20px 0;
+}
+.list {
+  width: 25%;
+}
+.list h4 {
+  font-size: 21px;
+  color: var(--background-color);
+  margin-bottom: 30px;
+  position: relative;
+}
+.list h4::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 60px;
+  left: 0;
+  bottom: -10px;
+  background: var(--background-color);
+}
+.list ul li:not(:last-child) {
+  margin-bottom: 16px;
+}
+.list ul li a {
+  color: #ffffffbf;
+  font-size: var(--p-font);
+  display: block;
+  transition: 0.3s;
+}
+.list ul li a:hover {
+  color: var(--background-color);
+  transform: translateX(14px);
+}
+.list .social a {
+  height: 40px;
+  width: 40px;
+  background: var(--background-color);
+  color: var(--main-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+  border-radius: 15px;
+  transition: 0.3s;
+  margin-right: 10px;
+}
+.list .social a:hover {
+  transform: scale(1.1);
+}
+.end-text {
+  text-align: center;
+  padding-top: 90px;
+}
+
+.end-text .iteb {
+  width: 60pt;
+}
+.end-text p {
+  color: var(--background-color);
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.end-text p a {
+  color: #1067cc;
+}
+
+.end-text p a:hover {
+  color: white;
+}
+
+@media (max-width: 1400px) {
+  header {
+    padding: 17px 3%;
+    transition: 0.2s;
+  }
+  header.sticky {
+    padding: 10px 3%;
+    transition: 0.2s;
+  }
+  section {
+    padding: 80px 3%;
+    transition: 0.2s;
+  }
+  :root {
+    --big-font: 6rem;
+    --h2-font: 3rem;
+    --p-font: 1.1rem;
+    transition: 0.2s;
+  }
+}
+
+@media (max-width: 1400px) {
+  #menu-icon {
+    display: block;
+  }
+  .sticky #menu-icon {
+    color: var(--text-color);
+  }
+  .home {
+    height: 88vh;
+  }
+  .navbar {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 270px;
+    height: 120vh;
+    background: #1067cc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 30px;
+    transition: 0.5s all;
+  }
+  .navbar a {
+    display: block;
+    margin: 1.2rem 0;
+  }
+  .sticky .navbar a {
+    color: var(--background-color);
+  }
+  .navbar a:hover {
+    color: var(--text-color);
+  }
+  .open {
+    right: 0;
+  }
+  .list {
+    width: 50%;
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .col-content {
+    flex: 0 0 calc(33.33% - 13.33px);
+    max-width: calc(33.33% - 13.33px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .col-content {
+    flex: 0 0 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 575px) {
+  header .logo {
+    text-align: center;
+  }
+  .list {
+    width: 100%;
+  }
+  .newsletter form {
+    width: 350px;
+  }
+  :root {
+    --big-font: 3.8rem;
+    --h2-font: 1.8rem;
+    transition: 0.2s;
+  }
+  .text {
+    text-align: center;
+  }
+  .home {
+    height: 85vh;
+    transition: 0.2s;
+  }
+
+  .destination-content {
+    gap: 15px;
+  }
+
+  .col-content {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
